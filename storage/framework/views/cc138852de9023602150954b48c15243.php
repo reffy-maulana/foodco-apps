@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Food.Co - Istana Kuliner Pakujaya</title>
         <!-- Favicon-->
-        <link rel="shortcut icon" href="{{asset ('import/assets/profile.png')}}" type="image/x-icon">
+        <link rel="shortcut icon" href="<?php echo e(asset ('import/assets/profile.png')); ?>" type="image/x-icon">
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href={{asset ('import/css/styles.css')}} rel="stylesheet" />
+        <link href=<?php echo e(asset ('import/css/styles.css')); ?> rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -47,7 +47,7 @@
                                 <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Istana Kuliner Pakujaya</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
                                     <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="#">Order</a>
-                                    {{-- <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="#">View Outlet</a> --}}
+                                    
                                 </div>
                             </div>
                         </div>
@@ -57,9 +57,9 @@
                                 <div class="profile bg-gradient-primary-to-secondary">
                                     <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
                                     <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                                    {{-- <div class="profile-kecil bg-white"> --}}
-                                        <img class="profile-img" src={{asset ('import/assets/profile-bg.jpg')}} alt="..." />
-                                    {{-- </div> --}}
+                                    
+                                        <img class="profile-img" src=<?php echo e(asset ('import/assets/profile-bg.jpg')); ?> alt="..." />
+                                    
                                     <div class="dots-1">
                                         <!-- SVG Dots-->
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
@@ -224,17 +224,17 @@
                                 <p class="lead fw-light mb-4">This website builded by student bootcamp from Baparekraf Digital Talent Web Development 2024 Program</p>
                                 <div class="team-container">
                                     <div class="team-items">
-                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" alt="">
+                                        <img src="<?php echo e(asset ('import/assets/profile-bg.jpg')); ?>" alt="">
                                         <h2>Reffy</h2>
                                         <p>fullstack</p>
                                     </div>
                                     <div class="team-items">
-                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" alt="">
+                                        <img src="<?php echo e(asset ('import/assets/profile-bg.jpg')); ?>" alt="">
                                         <h2>Dwi</h2>
                                         <p>Backend</p>
                                     </div>
                                     <div class="team-items">
-                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" alt="">
+                                        <img src="<?php echo e(asset ('import/assets/profile-bg.jpg')); ?>" alt="">
                                         <h2>Rayhan</h2>
                                         <p>FrontEnd</p>
                                     </div>
@@ -259,3 +259,4 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\foodco-apps\resources\views/index.blade.php ENDPATH**/ ?>

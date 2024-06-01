@@ -11580,18 +11580,26 @@ html {
 
 .profile {
   position: relative;
-  height: 75vw;
-  width: 75vw;
+  display: flex;
   border-radius: 5vw;
-  margin-top: 5vw;
-  max-height: 40rem;
   max-width: 40rem;
+  justify-content: space-around;
+  align-items: center;
 }
+.profile-kecil {
+    position: relative;
+    height: 25vw;
+    width: 25vw;
+    border-radius: 5vw;
+    max-height: 40rem;
+    max-width: 40rem;
+  }
 .profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
+  height: 30vw;
+  max-height: 25rem;
   position: absolute;
-  bottom: 0;
+  bottom: 1;
+  border-radius: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -11631,14 +11639,57 @@ html {
 .profile .dots-4 svg {
   fill: #1e30f3;
 }
+.profile .dots-4 svg {
+    fill: #1e30f3;
+}
+.team-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.team-items img {
+    border-radius: 50%;
+    width: 25vh;
+    height: 25vh;
+}
+@media (max-width: 576px) {
+    .profile {
+        height: 60vw;
+        width: 60vw;
+    }
+    .profile .profile-img {
+        height: 50vw;
+    }
+    .profile .dots-1 {
+        width: 3vw;
+        right: 1.5vw;
+    }
+    .profile .dots-2 {
+        width: 3vw;
+        right: -4vw;
+    }
+    .profile .dots-3 {
+        width: 3vw;
+        left: 1.5vw;
+    }
+    .profile .dots-4 {
+        width: 3vw;
+        left: -4vw;
+    }
+    iframe {
+        width: 70vw;
+        height: 80vw;
+    }
 
+}
 @media (min-width: 576px) {
   .profile {
     height: 60vw;
     width: 60vw;
   }
   .profile .profile-img {
-    height: 65vw;
+    height: 50vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11656,6 +11707,7 @@ html {
     width: 3vw;
     left: -4vw;
   }
+
 }
 @media (min-width: 768px) {
   .profile {
@@ -11663,7 +11715,7 @@ html {
     width: 50vw;
   }
   .profile .profile-img {
-    height: 55vw;
+    height: 40vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11688,7 +11740,7 @@ html {
     width: 40vw;
   }
   .profile .profile-img {
-    height: 45vw;
+    height: 30vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11713,7 +11765,7 @@ html {
     width: 35vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height: 25vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
