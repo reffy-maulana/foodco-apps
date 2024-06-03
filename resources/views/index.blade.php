@@ -29,7 +29,6 @@
                             <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Order</a></li>
-                            <li class="nav-item"><a class="nav-link fw-bolder" href="/register">Register</a></li>
                             <li class="nav-item"><a class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" href="/login">Login</a></li>
                         </ul>
                     </div>
@@ -221,22 +220,22 @@
                         <div class="col-xxl-10">
                             <div class="text-center my-5">
                                 <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Our Team</span></h2>
-                                <p class="lead fw-light mb-4">This website builded by student bootcamp from Baparekraf Digital Talent Web Development 2024 Program</p>
+                                <p class="lead fw-light mb-4">This website builded by bootcamp student from Baparekraf Digital Talent Web Development 2024 Program</p>
                                 <div class="team-container">
                                     <div class="team-items">
-                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" alt="">
-                                        <h2>Reffy</h2>
-                                        <p>fullstack</p>
+                                        <img src="{{asset ('import/assets/reffy.png')}}" alt="">
+                                        <h2 class="fw-bold text-gradient">Reffy</h2>
+                                        <p><span class="fw-semibold">Fullstack</span> Developer</p>
                                     </div>
                                     <div class="team-items">
-                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" alt="">
-                                        <h2>Dwi</h2>
-                                        <p>Backend</p>
+                                        <img src="{{asset ('import/assets/dwi.png')}}" alt="">
+                                        <h2 class="fw-bold text-gradient">Dwi</h2>
+                                        <p><span class="fw-semibold">Backend</span> Developer</p>
                                     </div>
                                     <div class="team-items">
-                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" alt="">
-                                        <h2>Rayhan</h2>
-                                        <p>FrontEnd</p>
+                                        <img src="{{asset ('import/assets/rayhan.png')}}" alt="">
+                                        <h2 class="fw-bold text-gradient">Rayhan</h2>
+                                        <p><span class="fw-semibold">FrontEnd</span> Developer</p>
                                     </div>
                                 </div>
                             </div>
