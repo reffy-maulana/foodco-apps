@@ -26,18 +26,60 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="/#aboutus">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/#location">Location</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Order</a></li>
-                            <li class="nav-item"><a class="nav-link fw-bolder" href="/register">Register</a></li>
-                            <li class="nav-item"><a class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" href="/login">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about#location">Location</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/partner">Our Partner</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div>
-                Halaman Login
-            </div>
+            <div class="content">
+                <div class="container px-5 py-5">
+                  <div class="row justify-content-center py-5">
+                    <div class="container-login-form col-md-6 py-5 bg-light">
+                      <div class="row justify-content-center">
+                        <div class="col-md-12">
+                          <div class="form-block">
+                            <div class="mb-4 text-center py-5">
+                                <h3>Sign In to <span class="fw-bold text-gradient">Food.Co</span></h3>
+                            </div>
+                            <form action="#" method="post">
+                              <div class="form-group first">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username">
+                              </div>
+                              <div class="form-group last mb-4">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password">
+                              </div>
+
+                              <div class="d-flex mb-5 align-items-center">
+                                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                                  <input type="checkbox" checked="checked"/>
+                                  <div class="control__indicator"></div>
+                                </label>
+                              </div>
+
+                              <div class="text-center">
+                                <input type="submit" value="Log In" class="fw-bold btn btn-form text-white btn-primary">
+                              </div>
+
+                              <span class="d-block text-center my-4 text-muted"> or sign in with</span>
+
+                              <div class="social-login text-center px-4">
+                                <a class="text-gradient"><i class="bi bi-facebook"></i></a>
+                                <a class="text-gradient"><i class="bi bi-twitter"></i></a>
+                                <a class="text-gradient"><i class="bi bi-google"></i></a>
+                                </a>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </main>
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto">

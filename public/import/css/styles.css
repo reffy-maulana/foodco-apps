@@ -11669,6 +11669,11 @@ html {
     display: flex;
     justify-content: space-evenly;
 }
+
+/* Menu */
+.container-menu {
+    justify-content: center;
+}
 @media (max-width: 576px) {
     .profile {
         height: 60vw;
