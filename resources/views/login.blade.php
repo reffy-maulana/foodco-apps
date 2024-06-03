@@ -29,15 +29,62 @@
                             <li class="nav-item"><a class="nav-link" href="/#aboutus">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="/#location">Location</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Order</a></li>
-                            <li class="nav-item"><a class="nav-link fw-bolder" href="/register">Register</a></li>
-                            <li class="nav-item"><a class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" href="/login">Login</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div>
-                Halaman Loginnnn
-            </div>
+            <div class="content">
+                <div class="container px-5 py-5">
+                  <div class="row justify-content-center py-5">
+                    <div class="container-login-form col-md-6 py-5 bg-light">
+                      <div class="row justify-content-center">
+                        <div class="col-md-12">
+                          <div class="form-block">
+                            <div class="mb-4 text-center py-5">
+                                <h3>Sign In to <span class="fw-bold text-gradient">Food.Co</span></h3>
+                            </div>
+                            <form action="#" method="post">
+                              <div class="form-group first">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username">
+                              </div>
+                              <div class="form-group last mb-4">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password">
+                              </div>
+
+                              <div class="d-flex mb-5 align-items-center">
+                                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                                  <input type="checkbox" checked="checked"/>
+                                  <div class="control__indicator"></div>
+                                </label>
+                              </div>
+
+                              <div class="text-center">
+                                <input type="submit" value="Log In" class="fw-bold btn btn-form text-white btn-primary">
+                              </div>
+
+                              <span class="d-block text-center my-4 text-muted"> or sign in with</span>
+
+                              <div class="social-login text-center">
+                                <a href="#" class="facebook">
+                                  <span class="icon-facebook mr-3"></span>
+                                </a>
+                                <a href="#" class="twitter">
+                                  <span class="icon-twitter mr-3"></span>
+                                </a>
+                                <a href="#" class="google">
+                                  <span class="icon-google mr-3"></span>
+                                </a>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </main>
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto">
