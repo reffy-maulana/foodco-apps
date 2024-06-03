@@ -11665,6 +11665,10 @@ html {
     border-width: 5px;
     border-image-source: linear-gradient(to right, #1e30f3 , #e21e80);
 }
+.social-login {
+    display: flex;
+    justify-content: space-evenly;
+}
 @media (max-width: 576px) {
     .profile {
         height: 60vw;

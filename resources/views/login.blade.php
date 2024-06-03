@@ -66,15 +66,10 @@
 
                               <span class="d-block text-center my-4 text-muted"> or sign in with</span>
 
-                              <div class="social-login text-center">
-                                <a href="#" class="facebook">
-                                  <span class="icon-facebook mr-3"></span>
-                                </a>
-                                <a href="#" class="twitter">
-                                  <span class="icon-twitter mr-3"></span>
-                                </a>
-                                <a href="#" class="google">
-                                  <span class="icon-google mr-3"></span>
+                              <div class="social-login text-center px-4">
+                                <a class="text-gradient"><i class="bi bi-facebook"></i></a>
+                                <a class="text-gradient"><i class="bi bi-twitter"></i></a>
+                                <a class="text-gradient"><i class="bi bi-google"></i></a>
                                 </a>
                               </div>
                             </form>
