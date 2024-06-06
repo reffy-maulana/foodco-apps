@@ -3659,7 +3659,6 @@ textarea.form-control-lg {
   border-top-right-radius: var(--bs-nav-tabs-border-radius);
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  isolation: isolate;
   border-color: var(--bs-nav-tabs-link-hover-border-color);
 }
 .nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled {
@@ -7025,6 +7024,7 @@ textarea.form-control-lg {
 
 .d-flex {
   display: flex !important;
+  flex-direction: column;
 }
 
 .d-inline-flex {
@@ -11674,6 +11674,7 @@ html {
 .container-menu {
     justify-content: center;
 }
+
 @media (max-width: 576px) {
     .profile {
         height: 60vw;
