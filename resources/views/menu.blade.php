@@ -44,122 +44,146 @@
                                 <div class="container py-5">
                                     <div class="tab-class text-center">
                                         <div class="row">
-                                            <div class="col-12 pb-5 text-center text-gradient">
-                                                <h1 class="fw-bolder">Our Partner</h1>
+                                            <div class="col-4 text-start text-gradient">
+                                                <h1 class="fw-bolder">Our Menu</h1>
+                                            </div>
+                                            <div class="col-8 text-end">
+                                                <ul class="nav d-inline-flex text-center mb-5 small fw-bolder">
+                                                    <li class="nav-item"><a class="m-2 py-2 nav-tabs nav-link tab-link" data-bs-toggle="pill" href="#tab-1">All Menu</a></li>
+                                                    <li class="nav-item"><a class="py-2 m-2 nav-tabs nav-link tab-link" data-bs-toggle="pill" href="#tab-2">Foods</a></li>
+                                                    <li class="nav-item"><a class="m-2 py-2 nav-tabs nav-link tab-link" data-bs-toggle="pill" href="#tab-3">Drinks</a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="partner-content">
+                                        <div class="menu-content">
                                             <div id="tab-1" class="">
                                                 <div class="row g-4">
                                                     <div class="col-lg-12">
-                                                        <div class="partner-container row g-4">
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                        <div class="menu-container row g-4">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="/detail-partner" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div><div class="partner-items col-md-6 col-lg-4 col-xl-3">
-                                                                <div class="rounded position-relative">
-                                                                    <div class="partner-img">
-                                                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
-                                                                    </div>
-                                                                    <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
-                                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
-                                                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
                                                                 <div class="rounded position-relative">
-                                                                    <div class="partner-img">
+                                                                    <div class="menu-img">
                                                                         <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
                                                                     </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
                                                                     <div class="p-2 border border-secondary border-top-0 rounded-bottom">
-                                                                        <h4 class="fw-bold text-secondary">Partner 1</h4>
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
                                                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
                                                                         <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                            <a href="/menu" class="btn border border-secondary rounded-pill px-3 text-secondary"> Order Menu </a>
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="menu-items col-md-6 col-lg-4 col-xl-3">
+                                                                <div class="rounded position-relative">
+                                                                    <div class="menu-img">
+                                                                        <img src="{{asset ('import/assets/profile-bg.jpg')}}" class="img-fluid w-100 rounded-top" alt="">
+                                                                    </div>
+                                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
+                                                                    <div class="p-2 border border-secondary border-top-0 rounded-bottom">
+                                                                        <h4 class="fw-bold text-secondary">Menu 1</h4>
+                                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+                                                                        <div class="d-flex justify-content-between flex-lg-wrap">
+                                                                            <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-secondary"> Buy </a>
                                                                         </div>
                                                                     </div>
                                                                 </div>

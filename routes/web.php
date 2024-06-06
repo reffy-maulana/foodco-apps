@@ -14,3 +14,6 @@ Route::get('/about', function () {
 Route::get('/partner', function () {
     return view('partner');
 });
+Route::get('/menu', function () {
+    return view('menu');
+});
