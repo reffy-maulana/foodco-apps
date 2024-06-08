@@ -11,6 +11,12 @@ Route::get('/login', [AuthController::class, 'login']);
 Route::get('/regist', [AuthController::class, 'registration']);
 Route::post('registration_post', [AuthController::class, 'registration_post']);
 Route::post('login_post', [AuthController::class, 'login_post']);
+Route::get('/admin', [AuthController::class, 'login_post']);
+
+
+Route::group(['middleware' => 'admin'], function(){
+    Route::get('admin', [HomeController::class, 'admin']);
+});
 
 
 
