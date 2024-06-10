@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
         return view('index');
     }
-    public function admin()
+    public function admin(Request $request)
     {
         return view('admin/admin');
     }

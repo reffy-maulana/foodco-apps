@@ -13,9 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->alias([
-            'admin' => LoginAdmin::class,
-        ]);
+        // $middleware->alias([
+        //     'admin' => LoginAdmin::class,
+        // ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -18,11 +18,16 @@ class LoginAdmin
     {
         if(Auth::check())
         {
-            return $next($request);
+            if (Auth::user()) {
+                return $next($request);
+            }
+            else {
+                Auth::logout();
+                return redirect()->intended('/');            }
         }
         else {
             Auth::logout();
-            return redirect(url('login'));
+            return redirect();
         }
     }
 }

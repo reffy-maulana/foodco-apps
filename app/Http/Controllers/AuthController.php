@@ -31,14 +31,34 @@ class AuthController extends Controller
     }
     public function login_post(Request $request)
     {
-        // dd($request->all());
-        if (Auth::attempt(['name' => $request->name, 'password' => $request->password], true)) 
-        {
-            return redirect('admin')->with('success', 'Login Success');
+        $credentials = $request->validate([
+            'name' => ['required'],
+            'password' => ['required'],
+        ]);
+ 
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+ 
+            return redirect()->intended('/')->with('success', 'Login Success');
         }
+ 
+        return back();
     }
 
+        // dd($request->all());
+        // if (Auth::attempt(['name' => $request->name, 'password' => $request->password], true)) 
+        // {
+        //     return redirect('/')->with('success', 'Login Success');
+        // }
+    
+
     public function login(){
+
         return view('login');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect(url('login'));
     }
 }
