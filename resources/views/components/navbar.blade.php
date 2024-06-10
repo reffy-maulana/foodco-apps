@@ -6,7 +6,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="/about#location">Location</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/partner">Our Partner</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= route('partner'); ?>">Our Partner</a></li>
 
                             @auth
                             <li class="nav-item"><a class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" href="/logout">Logout</a></li>

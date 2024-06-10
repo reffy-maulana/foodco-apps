@@ -19,6 +19,14 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        Schema::create('partners', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('Deskripsi')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
