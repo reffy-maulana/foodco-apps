@@ -29,13 +29,12 @@
                         <div class="col-md-12">
                           <div class="form-block">
                             <div class="mb-4 text-center py-5">
-                                <h3>Sign In to <span class="fw-bold text-gradient">Food.Co</span></h3>
+                                <h3>Registration to <span class="fw-bold text-gradient">Food.Co</span></h3>
                             </div>
-                            <form action="<?=  url('login_post')  ?>" method="post">
-                            <?=  csrf_field()  ?>
-
+                            <form action="<?=  url('registration_post')  ?>" method="post">
+                              <?=  csrf_field()  ?>
                               <div class="form-group first">
-                                <label for="username">Username</label>
+                                <label for="name">Username</label>
                                 <input type="text" class="form-control" id="username" value="<?= old('name')  ?>" name="name">
                               </div>
                               <div class="form-group last mb-4">
@@ -43,15 +42,10 @@
                                 <input type="password" class="form-control" id="password" value="" name="password">
                               </div>
 
-                              <div class="d-flex mb-5 align-items-center">
-                                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                                  <input type="checkbox" checked="checked"/>
-                                  <div class="control__indicator"></div>
-                                </label>
-                              </div>
+
 
                               <div class="text-center">
-                                <input type="submit" value="Log In" class="fw-bold btn btn-form text-white btn-primary">
+                                <input type="submit" value="Registration" class="fw-bold btn btn-form text-white btn-primary">
                               </div>
 
                               <span class="d-block text-center my-4 text-muted"> or sign in with</span>

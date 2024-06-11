@@ -29,39 +29,30 @@
                         <div class="col-md-12">
                           <div class="form-block">
                             <div class="mb-4 text-center py-5">
-                                <h3>Sign In to <span class="fw-bold text-gradient">Food.Co</span></h3>
+                                <h3>Tambah Data</h3>
                             </div>
-                            <form action="<?=  url('login_post')  ?>" method="post">
+                            <form action="<?=  url('partner')  ?>" method="post" enctype="multipart/form-data">
                             <?=  csrf_field()  ?>
 
                               <div class="form-group first">
-                                <label for="username">Username</label>
+                                <label for="username">Nama Partner</label>
                                 <input type="text" class="form-control" id="username" value="<?= old('name')  ?>" name="name">
                               </div>
-                              <div class="form-group last mb-4">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" value="" name="password">
+                              <div class="form-group first">
+                                <label for="deskripsi">Deskripsi</label>
+                                <input type="text" class="form-control" id="deskripsi" value="<?= old('deskripsi')  ?>" name="deskripsi">
+                              </div>
+                              <div class="mb-3">
+                                <label for="imageUpload" class="form-label"></label>
+                                <input class="form-control" type="file" id="formFile" name="photo" accept=".png, .jpg, .jpeg">
                               </div>
 
-                              <div class="d-flex mb-5 align-items-center">
-                                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                                  <input type="checkbox" checked="checked"/>
-                                  <div class="control__indicator"></div>
-                                </label>
+
+                              <div class="text-center mt-3">
+                                <input type="submit" value="Tambah" class="fw-bold btn btn-form text-white btn-primary">
                               </div>
 
-                              <div class="text-center">
-                                <input type="submit" value="Log In" class="fw-bold btn btn-form text-white btn-primary">
-                              </div>
-
-                              <span class="d-block text-center my-4 text-muted"> or sign in with</span>
-
-                              <div class="social-login text-center px-4">
-                                <a class="text-gradient"><i class="bi bi-facebook"></i></a>
-                                <a class="text-gradient"><i class="bi bi-twitter"></i></a>
-                                <a class="text-gradient"><i class="bi bi-google"></i></a>
-                                </a>
-                              </div>
+                            
                             </form>
                           </div>
                         </div>
