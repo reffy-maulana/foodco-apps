@@ -31,13 +31,12 @@
               <div class="col-md-12">
                 <div class="form-block">
                   <div class="mb-4 text-center py-5">
-                    <h3>Tambah Data</h3>
+                    <h3>Edit Menu</h3>
                   </div>
                   <form action="<?= route('menus.update', ['partner' => $partner->id, 'menu' => $menu->id])  ?>" method="post" enctype="multipart/form-data">
                     @method('put')
 
                     <?= csrf_field()  ?>
-
 
                     <div class="form-group first">
                       <label for="username">Nama Partner</label>
@@ -54,13 +53,9 @@
                       <img src="{{ url('/') }}/uploads/menu/{{ $menu->photo }}" class="img-fluid w-100 h-50 rounded-top" alt="">
                       @endif
                     </div>
-
-
                     <div class="text-center mt-3">
                       <input type="submit" value="Tambah" class="fw-bold btn btn-form text-white btn-primary">
                     </div>
-
-
                   </form>
                 </div>
               </div>
