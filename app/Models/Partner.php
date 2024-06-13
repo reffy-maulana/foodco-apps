@@ -14,4 +14,9 @@ class Partner extends Model
 
         'deskripsi',
     ];
+
+    public function menus()
+    {
+        return $this->hasMany(Menu::class);
+    }
 }
