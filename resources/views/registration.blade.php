@@ -18,53 +18,52 @@
         <link href={{asset ('import/css/styles.css')}} rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100">
+      <header>
+        <!-- Navigation-->
+        <x-navbar></x-navbar>
+      </header>
+      
         <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <x-navbar></x-navbar>
-            <div class="content">
-                <div class="container px-5 py-5">
-                  <div class="row justify-content-center py-5">
-                    <div class="container-login-form col-md-6 py-5 bg-light">
-                      <div class="row justify-content-center">
-                        <div class="col-md-12">
-                          <div class="form-block">
-                            <div class="mb-4 text-center py-5">
-                                <h3>Registration to <span class="fw-bold text-gradient">Food.Co</span></h3>
-                            </div>
-                            <form action="<?=  url('registration_post')  ?>" method="post">
-                              <?=  csrf_field()  ?>
-                              <div class="form-group first">
-                                <label for="name">Username</label>
-                                <input type="text" class="form-control" id="username" value="<?= old('name')  ?>" name="name">
-                              </div>
-                              <div class="form-group last mb-4">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" value="" name="password">
-                              </div>
-
-
-
-                              <div class="text-center">
-                                <input type="submit" value="Registration" class="fw-bold btn btn-form text-white btn-primary">
-                              </div>
-
-                              <span class="d-block text-center my-4 text-muted"> or sign in with</span>
-
-                              <div class="social-login text-center px-4">
-                                <a class="text-gradient"><i class="bi bi-facebook"></i></a>
-                                <a class="text-gradient"><i class="bi bi-twitter"></i></a>
-                                <a class="text-gradient"><i class="bi bi-google"></i></a>
-                                </a>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
+          <div class="container px-5 py-5">
+            <div class="row justify-content-center py-5">
+              <div class="container-login-form col-md-6 py-5 bg-light">
+                <div class="row justify-content-center">
+                  <div class="col-md-12">
+                    <div class="form-block">
+                      <div class="mb-4 text-center py-5">
+                          <h3>Registration to <span class="fw-bold text-gradient">Food.Co</span></h3>
                       </div>
+                      <form action="<?=  url('registration_post')  ?>" method="post">
+                        <?=  csrf_field()  ?>
+                        <div class="form-group first">
+                          <label for="name">Username</label>
+                          <input type="text" class="form-control" id="username" value="<?= old('name')  ?>" name="name">
+                        </div>
+                        <div class="form-group last mb-4">
+                          <label for="password">Password</label>
+                          <input type="password" class="form-control" id="password" value="" name="password">
+                        </div>
+                        <div class="text-center">
+                          <input type="submit" value="Registration" class="fw-bold btn btn-form text-white btn-primary">
+                        </div>
+
+                        <span class="d-block text-center my-4 text-muted"> or sign in with</span>
+
+                        <div class="social-login text-center px-4">
+                          <a class="text-gradient"><i class="bi bi-facebook"></i></a>
+                          <a class="text-gradient"><i class="bi bi-twitter"></i></a>
+                          <a class="text-gradient"><i class="bi bi-google"></i></a>
+                          </a>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
         </main>
+
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto">
             <div class="container px-5">
@@ -73,9 +72,11 @@
                 </div>
             </div>
         </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        
     </body>
 </html>

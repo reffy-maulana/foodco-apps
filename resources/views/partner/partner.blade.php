@@ -20,11 +20,13 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
+    <header>
         <!-- Navigation-->
         <x-navbar></x-navbar>
-        <!-- Header-->
-        <header class="bg-light py-5">
+    </header>
+    
+    <main class="flex-shrink-0">
+        <div class="bg-light py-5">
             <div class="px-5 pb-5">
                 <div class="container-menu row gx-5">
                     <div class="col-xxl-7">
@@ -48,7 +50,7 @@
                                                 <div class="col-lg-12">
                                                     <div class="partner-container row g-4">
                                                         @foreach ($partners as $partner)
-                                                        <div class="partner-items col-md-6 col-lg-4 col-xl-3">
+                                                        <div class="partner-items col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                                             <div class="rounded position-relative">
                                                                 <div class="partner-img">
                                                                     <img src="{{ url('/') }}/uploads/{{ $partner->photo }}" class="img-fluid w-100 rounded-top" alt="" style="width: 100%; height: 150px; object-fit: cover; object-position: center;">
@@ -75,7 +77,7 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
     </main>
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">

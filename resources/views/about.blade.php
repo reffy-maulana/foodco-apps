@@ -20,53 +20,57 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
+    <header>
         <!-- Navigation-->
         <x-navbar></x-navbar>
+    </header>
+    
+    <main class="flex-shrink-0">
+
         <!-- About Section-->
         <section class="bg-light py-5" id="aboutus">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-xxl-9">
-                        <div class="text-center my-5">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Us</span></h2>
-                            <p class="lead fw-light mb-4">Our Website is called Food.co where you can find menu at Foodcourt Istana Kuliner Pakujaya</p>
-                            <p class="text-muted">This website purpose is to help Foodcourt Istana Kuliner Pakujaya gaining customer, to get easy access to view the available menu</p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a class="text-gradient" href="https://www.instagram.com/istanakulinerpakujaya?igsh=MXZmbXV1bXQ2YTBycw=="><i class="bi bi-instagram"></i></a>
-                            </div>
+                    <h2 class="display-5 text-center fw-bolder mb-5"><span class="text-gradient d-inline">Tentang Kami</span></h2>
+                    <hr class="mb-5">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
+                        <div class="text-center my-5 my-lg-0">
+                            <h2 class="mb-5 fw-bolder"><span class="text-gradient d-inline">Tentang Website</span></h2>
+                            <hr>
+                            <p class="lead fw-light mb-4">"Temukan beragam menu menarik di Istana Kuliner Pakujaya melalui Food.Co"</p>
+                            <p class="text-muted mb-4">
+                                Food.Co adalah sebuah aplikasi berbasis website yang bertujuan sebagai platform untuk memasarkan Food Court Istana Kuliner Pakujaya. Aplikasi ini dirancang untuk memfasilitasi interaksi antara pengguna dengan Food Court Istana Kuliner Pakujaya, menyediakan informasi yang komprehensif tentang menu makanan, harga, promosi, serta acara khusus yang diselenggarakan di sana. Dengan fitur-fitur yang inovatif dan user-friendly, Food.Co membantu memperluas jangkauan Food Court Istana Kuliner Pakujaya serta meningkatkan keterlibatan pengguna dalam menikmati pengalaman kuliner yang unik dan beragam.
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center my-5 my-lg-0">
+                            <h2 class="fw-bolder mb-5"><span class="text-gradient d-inline">Kontak Kami</span></h2>
+                            <hr>
+                            <p class="text-muted mb-4">Hubungi kami melalui informasi berikut:</p>
+                            <ul class="list-unstyled text-muted">
+                                <li class="mb-3"><i class="bi bi-telephone-fill me-2"></i>Nomor Telepon: +62 123 4567 890</li>
+                                <li class="mb-3"><i class="bi bi-envelope-fill me-2"></i>Email: info@food.co</li>
+                                <li class="mb-3"><i class="bi bi-instagram me-2"></i>Instagram: <a href="https://www.instagram.com/istanakulinerpakujaya?igsh=MXZmbXV1bXQ2YTBycw==" class="text-decoration-none text-gradient">istanakulinerpakujaya</a></li>
+                                <li class="mb-3"><i class="bi bi-facebook me-2"></i>Facebook: <a href="https://www.facebook.com/istanakulinerpakujaya" class="text-decoration-none text-gradient">Istana Kuliner Pakujaya</a></li>
+                                <li class="mb-3"><i class="bi bi-twitter me-2"></i>Twitter: <a href="https://twitter.com/istanakuliner" class="text-decoration-none text-gradient">@istanakuliner</a></li>
+                            </ul>
+                            <hr>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Location Section-->
-        <section class="bg-white py-5" id="location">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <h2 class="display-5 fw-bolder text-center"><span class="text-gradient d-inline">Our Outlet</span></h2>
-                    <div class="col-xxl-5 my-auto">
-                        <div class="text-center my-5">
-                            <p class="lead fw-light mb-4">You can find our location in the right map</p>
-                            <p class="text-muted">Our location is at Paku Jaya, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15324</p>
-                        </div>
-                    </div>
-                    <div class="col-xxl-7">
-                        <div class="iframe-container text-center my-5">
-                            <iframe style="border: 3px solid #e21e80" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.217853707533!2d106.67159007586825!3d-6.23498876105943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fba8f472b4e5%3A0xfdb086c844eb32cc!2sISTANA%20KULINER!5e0!3m2!1sid!2sid!4v1717209279987!5m2!1sid!2sid" width="500" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- Team Section-->
         <section class="bg-white py-5" id="ourteam">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xxl-10">
                         <div class="text-center my-5">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Our Team</span></h2>
-                            <p class="lead fw-light mb-4">This website builded by bootcamp student from Baparekraf Digital Talent Web Development 2024 Program</p>
+                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Tim Kami</span></h2>
+                            <p class="lead fw-light mb-4">Website ini dibangun oleh peserta program Baparekraf Digital Talent Web Development Bootcamp 2024</p>
                             <div class="team-container">
                                 <div class="team-items">
                                     <img src="{{asset ('import/assets/reffy.png')}}" alt="">
@@ -90,6 +94,7 @@
             </div>
         </section>
     </main>
+
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
         <div class="container px-5">
@@ -100,6 +105,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->

@@ -65,6 +65,7 @@
       </div>
     </div>
   </main>
+  
   <!-- Footer-->
   <footer class="bg-white py-4 mt-auto">
     <div class="container px-5">
