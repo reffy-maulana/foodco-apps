@@ -102,7 +102,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="deskripsi">Deskripsi</label>
-                            <input type="text" class="form-control" id="deskripsi" value="<?= old('deskripsi')  ?>" name="deskripsi">
+                            <textarea style="height: 200px;" class="form-control" id="deskripsi" value="<?= old('deskripsi')  ?>" name="deskripsi"></textarea>
                         </div>
                         <div class="input-group mb-3">
                             <select class="form-select" id="type" name="type">
@@ -152,7 +152,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="beritaDeskripsi{{ $berita->id }}">Deskripsi</label>
-                            <input type="text" class="form-control" id="beritaDeskripsi{{ $berita->id }}" value="<?= old('deskripsi', $berita->Deskripsi)  ?>" name="deskripsi">
+                            <textarea style="height: 200px;" class="form-control" id="beritaDeskripsi{{ $berita->id }}" value="<?= old('deskripsi', $berita->Deskripsi)  ?>" name="deskripsi"></textarea>
                         </div>
                         <div class="form-group mb-3">
                             <label for="type{{ $berita->id }}">Type</label>
