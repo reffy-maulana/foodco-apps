@@ -40,7 +40,7 @@
                             <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Istana Kuliner Pakujaya</span></h1>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
                                 <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="<?= route('partner'); ?>">Order</a>
-                                <a class="btn btn-success btn-lg px-5 py-3 fs-6 fw-bolder" href="/about">View Outlet</a>
+                                <a class="btn btn-success btn-lg px-5 py-3 fs-6 fw-bolder" href="#location">View Outlet</a>
                             </div>
                         </div>
                     </div>
@@ -164,6 +164,9 @@
 
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
+        <button id="btnScrollToTop" class="btn btn-primary d-block mx-auto mt-3">
+            <i class="bi bi-arrow-up-short"></i>Top
+        </button>
         <div class="container px-5">
             <div class="row align-items-center justify-content-center flex-column flex-sm-row">
                 <div class="col-auto ">
@@ -171,12 +174,14 @@
                 </div>
             </div>
         </div>
+
     </footer>
+
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
