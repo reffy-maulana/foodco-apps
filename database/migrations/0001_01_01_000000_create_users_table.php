@@ -33,6 +33,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('photo')->nullable();
             $table->string('Deskripsi')->nullable();
+            $table->integer('harga')->nullable();
             $table->timestamps();
         });
 
@@ -58,6 +59,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('partners');
+        Schema::dropIfExists('menus');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }

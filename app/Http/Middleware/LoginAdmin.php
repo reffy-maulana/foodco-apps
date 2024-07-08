@@ -16,18 +16,16 @@ class LoginAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             if (Auth::user()) {
                 return $next($request);
-            }
-            else {
+            } else {
                 Auth::logout();
-                return redirect()->intended('/');            }
-        }
-        else {
+                return redirect('/');
+            }
+        } else {
             Auth::logout();
-            return redirect();
+            return redirect('/');
         }
     }
 }

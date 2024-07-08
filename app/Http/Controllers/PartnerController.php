@@ -42,7 +42,7 @@ class PartnerController extends Controller
         $partner->photo = $file_name;
         $partner->save();
 
-        return redirect('partner');
+        return redirect('admin/partner');
     }
 
     public function update($id, Request $request)
@@ -76,7 +76,8 @@ class PartnerController extends Controller
 
         $update->save();
 
-        return redirect('partner');
+
+        return redirect('admin/partner');
     }
 
     public function destroy($id)
@@ -85,6 +86,6 @@ class PartnerController extends Controller
         File::delete(public_path('uploads/' . $delete->photo));
         $delete->delete();
 
-        return redirect('partner');
+        return redirect('admin/partner');
     }
 }

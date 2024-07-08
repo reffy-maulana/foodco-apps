@@ -24,7 +24,7 @@
         <!-- Navigation-->
         <x-navbar></x-navbar>
     </header>
-    
+
     <main class="flex-shrink-0">
         <div class="bg-light py-5">
             <div class="px-5 pb-5">

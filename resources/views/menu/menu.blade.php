@@ -24,7 +24,7 @@
         <!-- Navigation-->
         <x-navbar></x-navbar>
     </header>
-    
+
     <main class="flex-shrink-0">
         <div class="bg-light py-5">
             <div class="px-5 pb-5">
@@ -38,7 +38,7 @@
                                         <div class="col-6 text-start text-gradient">
                                             <h1 class="fw-bolder">Menu {{ $partner->name }}</h1>
                                         </div>
-                                        
+
                                         <div class="col-6 text-end">
                                             <ul class="nav d-inline-flex text-center mb-5 small fw-bolder gap-2">
                                                 @auth
@@ -116,16 +116,20 @@
                             <input class="form-control" type="file" id="formFile" name="photo" accept=".png, .jpg, .jpeg">
                         </div>
                 </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
                 </form>
             </div>
         </div>
     </div>
 
     {{-- Modal Edit Menu --}}
+    @foreach ($filteredMenuItems as $menu)
+
+    @if (isset($menu))
+
     <div class="modal fade" id="editMenu{{ $menu->id }}" tabindex="-1" aria-labelledby="editMenuLabel{{ $menu->id }}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -161,6 +165,12 @@
             </div>
         </div>
     </div>
+    @else
+    @endif
+    @endforeach
+
+
+
 
     {{-- Modal Edit Partner --}}
     <div class="modal fade" id="editPartner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -190,10 +200,10 @@
                             @endif
                         </div>
                 </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
                 </form>
             </div>
         </div>
