@@ -163,7 +163,29 @@
     </div>
     @endforeach
 
+    @foreach ($filteredMenuItems as $menu)
 
+    {{-- Modal Delete Menu --}}
+    <div class="modal fade" id="modalDelete{{ $menu->id }}" tabindex="-1" role="dialog" aria-labelledby="modalDeleteTitle{{ $menu->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form action="{{ route('menus.destroy', ['partner' => $menu->partner_id, 'menu' => $menu->id]) }}" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h5 class="mt-0">Apakah Anda yakin ingin menghapus menu ini?</h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endforeach
 
 
 

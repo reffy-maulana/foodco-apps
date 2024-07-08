@@ -92,3 +92,4 @@ Route::post('/partner/{partner}/menu', [MenuController::class, 'store'])->name('
 Route::delete('/partner/{partner}', [PartnerController::class, 'destroy'])->name('partner.destroy');
 Route::get('/partner/{partner}/menu/{menu}', [MenuController::class, 'edit'])->name('menus.edit')->middleware('auth');
 Route::put('/partner/{partner}/menu/{menu}', [MenuController::class, 'update'])->name('menus.update');
+Route::delete('/partner/{partner}/menu/{menu}', [MenuController::class, 'destroy'])->name('menus.destroy');

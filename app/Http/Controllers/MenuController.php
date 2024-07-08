@@ -127,4 +127,13 @@ class MenuController extends Controller
         // Redirect ke halaman partner
         return redirect()->route('adminmenus', ['partner' => $partnerId]);
     }
+
+    public function destroy($partnerId, $menuId)
+    {
+        $menu = Menu::findOrFail($menuId);
+        File::delete(public_path('uploads/menu/' . $menu->photo));
+        $menu->delete();
+
+        return redirect()->route('adminmenus', ['partner' => $partnerId]);
+    }
 }
