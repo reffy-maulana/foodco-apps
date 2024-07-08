@@ -51,7 +51,7 @@
                         <tr>
                             <th scope="row">{{$counter++}}</th>
                             <td>{{ $menu->name }}</td>
-                            <td>{{ $menu->harga }}</td>
+                            <td>Rp.{{ $menu->harga }}</td>
                             <td>{{ $menu->Deskripsi }}</td>
                             <td><img style="width: 100px; height: 100px; object-fit: cover; object-position: center;" src="{{ url('/') }}/uploads/menu/{{ $menu->photo }}" alt=""></td>
                             <td>

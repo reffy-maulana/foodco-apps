@@ -39,16 +39,7 @@
                                             <h1 class="fw-bolder">Menu {{ $partner->name }}</h1>
                                         </div>
 
-                                        <div class="col-6 text-end">
-                                            <ul class="nav d-inline-flex text-center mb-5 small fw-bolder gap-2">
-                                                @auth
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahMenu">Tambah Menu</button>
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPartner">Edit Partner</button>
-                                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete Partner</button>
-                                                @else
-                                                @endauth
-                                            </ul>
-                                        </div>
+
                                     </div>
 
                                     <div class="menu-content">
@@ -67,12 +58,9 @@
                                                                     <h4 class="fw-bold text-secondary"><?= $menu->name; ?></h4>
                                                                     <p><?= $menu->Deskripsi; ?></p>
                                                                     <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                        <p class="fs-5 fw-bold">Rp. 20.000</p>
+                                                                        <p class="fs-5 fw-bold">Rp. {{ $menu->harga }}</p>
                                                                         <a type="button" class="btn btn-primary rounded-pill px-3 text-light" href="#">Beli</a>
-                                                                        @auth
-                                                                        <button type="button" class="btn border border-secondary rounded-pill px-3 text-secondary" data-bs-toggle="modal" data-bs-target="#editMenu{{ $menu->id }}">Edit</button>
-                                                                        @else
-                                                                        @endauth
+
                                                                     </div>
                                                                 </div>
                                                             </div>
