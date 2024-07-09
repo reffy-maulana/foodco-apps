@@ -93,6 +93,10 @@
                             <label for="username">Nama Partner</label>
                             <input type="text" class="form-control" id="username" value="<?= old('name')  ?>" name="name">
                         </div>
+                        <div class="form-group">
+                            <label for="nohp">No Hp</label>
+                            <input type="number" class="form-control" id="nohp" name="nohp" value="{{ old('nohp') }}">
+                        </div>
                         <div class="form-group first">
                             <label for="deskripsi">Deskripsi</label>
                             <textarea style="height: 200px;" class="form-control" id="deskripsi" value="<?= old('deskripsi')  ?>" name="deskripsi"></textarea>
@@ -132,8 +136,12 @@
                             <input type="text" class="form-control" id="partnerName{{ $partner->id }}" name="name" value="{{ old('name', $partner->name) }}">
                         </div>
                         <div class="form-group">
+                            <label for="partnerNohp{{ $partner->id }}">No Hp</label>
+                            <input type="number" class="form-control" id="partnerNohp{{ $partner->nohp }}" name="nohp" value="{{ old('nohp', $partner->nohp) }}">
+                        </div>
+                        <div class="form-group">
                             <label for="partnerDeskripsi{{ $partner->id }}">Deskripsi</label>
-                            <textarea style="height: 200px;" class="form-control" id="partnerDeskripsi{{ $partner->id }}" name="deskripsi" value="{{ old('deskripsi', $partner->Deskripsi) }}"></textarea>
+                            <textarea style="height: 200px;" class="form-control" id="partnerDeskripsi{{ $partner->id }}" name="deskripsi">{{ old('deskripsi', $partner->Deskripsi) }}</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="partnerPhoto{{ $partner->id }}" class="form-label">Photo</label>

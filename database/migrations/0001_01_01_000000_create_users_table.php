@@ -22,6 +22,7 @@ return new class extends Migration
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+            $table->string('nohp')->nullable();
             $table->string('photo')->nullable();
             $table->string('Deskripsi')->nullable();
             $table->timestamps();

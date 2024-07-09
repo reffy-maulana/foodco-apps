@@ -59,7 +59,7 @@
                                                                     <p><?= $menu->Deskripsi; ?></p>
                                                                     <div class="d-flex justify-content-between flex-lg-wrap">
                                                                         <p class="fs-5 fw-bold">Rp. {{ $menu->harga }}</p>
-                                                                        <a type="button" class="btn btn-primary rounded-pill px-3 text-light" href="#">Beli</a>
+                                                                        <a target="_blank" type="button" class="btn btn-primary rounded-pill px-3 text-light" href="https://wa.me/{{ $partner->nohp }}?text=Halo%2C%20saya%20ingin%20memesan%20{{ $menu->name }}">Beli</a>
 
                                                                     </div>
                                                                 </div>

@@ -143,7 +143,7 @@
                         </div>
                         <div class="form-group">
                             <label for="menuDeskripsi{{ $menu->id }}">Deskripsi</label>
-                            <textarea style="height: 200px;" class="form-control" id="menuDeskripsi{{ $menu->id }}" name="deskripsi" value="{{ old('deskripsi', $menu->Deskripsi) }}"></textarea>
+                            <textarea style="height: 200px;" class="form-control" id="menuDeskripsi{{ $menu->id }}" name="deskripsi" value="">{{ old('deskripsi', $menu->Deskripsi) }}</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="menuPhoto{{ $menu->id }}" class="form-label">Photo</label>

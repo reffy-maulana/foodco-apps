@@ -25,6 +25,7 @@ class PartnerController extends Controller
         // Validasi inputan
         $partner = $request->validate([
             'name' => 'required',
+            'nohp' => 'required',
             'deskripsi' => 'required',
             'photo' => 'required',
         ]);
@@ -39,6 +40,7 @@ class PartnerController extends Controller
         $partner = new Partner;
         $partner->name = $request->name;
         $partner->deskripsi = $request->deskripsi;
+        $partner->nohp = $request->nohp;
         $partner->photo = $file_name;
         $partner->save();
 
@@ -52,11 +54,13 @@ class PartnerController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'deskripsi' => 'required',
+            'nohp' => 'required',
             'photo' => 'sometimes|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
         $update->name = $validatedData['name'];
         $update->deskripsi = $validatedData['deskripsi'];
+        $update->nohp = $validatedData['nohp'];
 
         if ($request->hasFile('photo')) {
             $filePath = public_path('uploads');
