@@ -24,7 +24,7 @@
         <!-- Navigation-->
         <x-navbar></x-navbar>
     </header>
-    
+
     <main class="flex-shrink-0">
         <div class="bg-light py-5">
             <div class="px-5 pb-5">
@@ -34,10 +34,6 @@
                         <div class="py-5">
                             <div class="container py-5">
                                 <div class="tab-class text-center">
-                                    @auth
-                                    <a href="partner/add_partner" type="button" class="btn btn-primary">Tambah Partner</a>
-                                    @else
-                                    @endauth
                                     <div class="row">
                                         <div class="col-12 pb-5 text-center text-gradient">
                                             <h1 class="fw-bolder">Our Partner</h1>

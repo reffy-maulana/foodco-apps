@@ -51,13 +51,15 @@ class MenuController extends Controller
         $menu = request()->validate([
             'name' => 'required',
             'deskripsi' => 'required',
-            'photo' => 'required',
+            'harga' => 'required',
+            'photo' => 'required|image|mimes:jpg,jpeg,png|max:2048',
             // 'partner_id' => 'required',
         ]);
 
         $filePath = public_path('uploads/menu');
         $menu  = new Menu;
         $menu->name = ($request->name);
+        $menu->harga = ($request->harga);
         $menu->partner_id = ($id); // Menggunakan nilai $id yang diterima dari URL
         $menu->deskripsi = ($request->deskripsi);
         $file = $request->file('photo');
@@ -67,7 +69,7 @@ class MenuController extends Controller
         $menu->photo = $file_name;
 
         $menu->save();
-        return redirect()->route('menus', ['partner' => $id]);
+        return redirect()->route('adminmenus', ['partner' => $id]);
     }
 
     public function edit($partnerId, $menuId)
@@ -88,12 +90,15 @@ class MenuController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'deskripsi' => 'required',
+            'harga' => 'required',
+
             'photo' => 'sometimes|image|mimes:jpg,jpeg,png|max:2048', // Photo tidak wajib, tetapi harus gambar jika ada
         ]);
 
         // Perbarui properti dari instance yang ditemukan
         $menu->name = $validatedData['name'];
         $menu->deskripsi = $validatedData['deskripsi'];
+        $menu->harga = $validatedData['harga'];
 
         if ($request->hasFile('photo')) {
             // Tangani file unggahan dan perbarui foto jika ada
@@ -120,6 +125,15 @@ class MenuController extends Controller
         $menu->save();
 
         // Redirect ke halaman partner
-        return redirect()->route('menus', ['partner' => $partnerId]);
+        return redirect()->route('adminmenus', ['partner' => $partnerId]);
+    }
+
+    public function destroy($partnerId, $menuId)
+    {
+        $menu = Menu::findOrFail($menuId);
+        File::delete(public_path('uploads/menu/' . $menu->photo));
+        $menu->delete();
+
+        return redirect()->route('adminmenus', ['partner' => $partnerId]);
     }
 }

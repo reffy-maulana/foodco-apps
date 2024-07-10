@@ -24,7 +24,7 @@
         <!-- Navigation-->
         <x-navbar></x-navbar>
     </header>
-    
+
     <main class="flex-shrink-0">
         <div class="bg-light py-5">
             <div class="px-5 pb-5">
@@ -38,17 +38,8 @@
                                         <div class="col-6 text-start text-gradient">
                                             <h1 class="fw-bolder">Menu {{ $partner->name }}</h1>
                                         </div>
-                                        
-                                        <div class="col-6 text-end">
-                                            <ul class="nav d-inline-flex text-center mb-5 small fw-bolder gap-2">
-                                                @auth
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahMenu">Tambah Menu</button>
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editPartner">Edit Partner</button>
-                                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete Partner</button>
-                                                @else
-                                                @endauth
-                                            </ul>
-                                        </div>
+
+
                                     </div>
 
                                     <div class="menu-content">
@@ -67,12 +58,9 @@
                                                                     <h4 class="fw-bold text-secondary"><?= $menu->name; ?></h4>
                                                                     <p><?= $menu->Deskripsi; ?></p>
                                                                     <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                        <p class="fs-5 fw-bold">Rp. 20.000</p>
-                                                                        <a type="button" class="btn btn-primary rounded-pill px-3 text-light" href="#">Beli</a>
-                                                                        @auth
-                                                                        <button type="button" class="btn border border-secondary rounded-pill px-3 text-secondary" data-bs-toggle="modal" data-bs-target="#editMenu{{ $menu->id }}">Edit</button>
-                                                                        @else
-                                                                        @endauth
+                                                                        <p class="fs-5 fw-bold">Rp. {{ $menu->harga }}</p>
+                                                                        <a target="_blank" type="button" class="btn btn-primary rounded-pill px-3 text-light" href="https://wa.me/{{ $partner->nohp }}?text=Halo%2C%20saya%20ingin%20memesan%20{{ $menu->name }}">Beli</a>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -116,16 +104,20 @@
                             <input class="form-control" type="file" id="formFile" name="photo" accept=".png, .jpg, .jpeg">
                         </div>
                 </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
                 </form>
             </div>
         </div>
     </div>
 
     {{-- Modal Edit Menu --}}
+    @foreach ($filteredMenuItems as $menu)
+
+    @if (isset($menu))
+
     <div class="modal fade" id="editMenu{{ $menu->id }}" tabindex="-1" aria-labelledby="editMenuLabel{{ $menu->id }}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -161,6 +153,12 @@
             </div>
         </div>
     </div>
+    @else
+    @endif
+    @endforeach
+
+
+
 
     {{-- Modal Edit Partner --}}
     <div class="modal fade" id="editPartner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -190,10 +188,10 @@
                             @endif
                         </div>
                 </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
                 </form>
             </div>
         </div>

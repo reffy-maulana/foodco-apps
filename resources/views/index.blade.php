@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Food.Co - Istana Kuliner Pakujaya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset ('import/assets/profile.png')}}" type="image/x-icon">
     <!-- Custom Google font-->
@@ -24,7 +25,7 @@
         <!-- Navigation-->
         <x-navbar></x-navbar>
     </header>
-    
+
     <main class="flex-shrink-0">
         <div class="bg-light py-5">
             <div class="container px-5 pb-5">
@@ -39,7 +40,7 @@
                             <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Istana Kuliner Pakujaya</span></h1>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
                                 <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="<?= route('partner'); ?>">Order</a>
-                                <a class="btn btn-success btn-lg px-5 py-3 fs-6 fw-bolder" href="/about">View Outlet</a>
+                                <a class="btn btn-success btn-lg px-5 py-3 fs-6 fw-bolder" href="#location">View Outlet</a>
                             </div>
                         </div>
                     </div>
@@ -52,15 +53,50 @@
         </div>
 
         <!-- Section Berita / Event -->
-        <x-news-event-section></x-news-event-section>
+        <x-news-event-section>
+
+        </x-news-event-section>
+        <div class="container py-2">
+            <div class="h1 text-center text-gradient fw-bold mb-5" id="pageHeaderTitle">News & Events</div>
+            @foreach ($news as $berita)
+
+
+            <article class="postcard bg-white blue">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="{{ url('/') }}/uploads/news/{{ $berita->photo }}" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title"><a class="text-black text-decoration-none" href="#">{{ $berita->headline }}</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time class="text-black" datetime="2020-05-25 12:00:00">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <p>{{ $berita->created_at->format('l, d F Y H:i:s') }}</p>
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt text-black">{{ $berita->Deskripsi }}</div>
+                    <div class="mt-4">
+                        <p class="text-dark">Author :{{$berita->author}}</p>
+                    </div>
+                </div>
+
+            </article>
+            @endforeach
+
+        </div>
+        </div>
+
+
 
         <!-- Partners Carousel Section -->
-        <section class="py-5 bg-light">
-            <div class="container-fluid">
-                <h2 class="fw-bolder mb-4 text-gradient text-center">Our Partners</h2>
-                <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div class="carousel-inner">
-                        @foreach ($partners->chunk(3) as $chunk)
+        <div class="container py-2">
+
+            <section class="py-5 bg-light">
+                <div class="container-fluid">
+                    <h2 class="fw-bolder mb-4 text-gradient text-center">Our Partners</h2>
+                    <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            @foreach ($partners->chunk(3) as $chunk)
                             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                 <div class="row gx-5 overflow-hidden">
                                     @foreach ($chunk as $partner)
@@ -71,9 +107,9 @@
                                                 <h5 class="card-title mb-3">{{ $partner->name }}</h5>
                                                 <p class="card-text mb-0">{{ $partner->deskripsi }}</p>
                                             </div>
-                                            <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                            <div class="card-footer p-2 pt-0 bg-transparent border-top-0 ">
                                                 <div class="d-flex justify-content-between">
-                                                    <a class="btn btn-outline-primary" href="{{ route('menus', ['partner' => $partner->id]) }}">Order Menu</a>
+                                                    <a class="btn btn-outline-primary " href="{{ route('menus', ['partner' => $partner->id]) }}">Order Menu</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,27 +117,29 @@
                                     @endforeach
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
+                            @endforeach
+                        </div>
+                        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#partnersCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
-                    </button>
+                    </button> -->
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-primary me-2" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
+                            <span aria-hidden="true">
+                                <i class="fa-solid fa-arrow-left"></i> </span>
+                        </button>
+                        <button class="btn btn-outline-primary" type="button" data-bs-target="#partnersCarousel" data-bs-slide="next">
+                            <span aria-hidden="true"> <i class="fa-solid fa-arrow-right"></i> </span>
+                        </button>
+                    </div>
                 </div>
-                <div class="text-center mt-4">
-                    <button class="btn btn-outline-primary me-2" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
-                        <span aria-hidden="true">Previous</span>
-                    </button>
-                    <button class="btn btn-outline-primary" type="button" data-bs-target="#partnersCarousel" data-bs-slide="next">
-                        <span aria-hidden="true">Next</span>
-                    </button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- Location Section-->
         <section class="bg-white py-5" id="location">
@@ -126,6 +164,9 @@
 
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
+        <button id="btnScrollToTop" class="btn btn-primary d-block mx-auto mt-3">
+            <i class="bi bi-arrow-up-short"></i>Top
+        </button>
         <div class="container px-5">
             <div class="row align-items-center justify-content-center flex-column flex-sm-row">
                 <div class="col-auto ">
@@ -133,12 +174,14 @@
                 </div>
             </div>
         </div>
+
     </footer>
+
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

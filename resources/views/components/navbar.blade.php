@@ -9,7 +9,10 @@
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
 
                 @auth
+                <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+
                 <li class="nav-item"><a class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" href="/logout">Logout</a></li>
+
                 @else
                 <li class="nav-item"><button class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" data-bs-toggle="modal" data-bs-target="#loginModal">Admin</button></li>
                 @endauth
@@ -27,8 +30,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="<?=  url('login_post')  ?>" method="post">
-                    <?=  csrf_field()  ?>
+                <form action="<?= url('login_post')  ?>" method="post">
+                    <?= csrf_field()  ?>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="name" value="<?= old('name')  ?>">
