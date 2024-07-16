@@ -78,11 +78,7 @@ Route::post('/admin/news', [NewsController::class, 'store'])->middleware('auth')
 Route::put('/admin/news/{news}', [NewsController::class, 'update'])->name('berita.update')->middleware('auth');
 Route::delete('/news/{news}', [NewsController::class, 'destroy'])->name('berita.destroy');
 Route::delete('/news/{news}', [NewsController::class, 'destroy'])->name('berita.destroy');
-
 Route::get('/partner/{partner}/menu', [MenuController::class, 'menu'])->name('menus');
-
-
-
 
 Route::post('/admin/partner', [PartnerController::class, 'store'])->middleware('auth');
 Route::put('/admin/partner/{partner}', [PartnerController::class, 'update'])->name('partner.update')->middleware('auth');

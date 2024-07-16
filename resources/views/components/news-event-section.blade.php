@@ -1,9 +1,7 @@
-<!-- resources/views/components/news-event-section.blade.php -->
-
 <section class="light">
     <style>
         .light {
-            background: #f3f5f7;
+            background-color: #f8f9fa;
         }
 
         .postcard {
@@ -15,10 +13,6 @@
             overflow: hidden;
             position: relative;
             color: #ffffff;
-        }
-
-        .postcard.light {
-            background-color: #e1e5ea;
         }
 
         .postcard .postcard__text {
@@ -92,6 +86,12 @@
             background-color: #bdbb49;
         }
 
+        .postcard .postcard__img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+
         @media screen and (min-width: 769px) {
             .postcard {
                 flex-wrap: inherit;
@@ -107,7 +107,8 @@
             }
 
             .postcard .postcard__img {
-                max-width: 300px;
+                max-width: 400px;
+                max-height: 100%;
                 transition: transform 0.3s ease;
             }
 
@@ -124,42 +125,16 @@
             }
         }
 
+        @media screen and (max-width: 768px) {
+            .postcard .postcard__img {
+                max-width: 100%;
+            }
+        }
+
         @media screen and (min-width: 1024px) {
             .postcard .postcard__text {
                 padding: 2rem 3.5rem;
             }
         }
     </style>
-
-
-    <!-- <div class="container py-2">
-        <div class="h1 text-center text-gradient fw-bold mb-5" id="pageHeaderTitle">News & Events</div>
-
-
-
-        <article class="postcard bg-white red">
-            <a class="postcard__img_link" href="#">
-                <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
-            </a>
-            <div class="postcard__text t-dark">
-                <h1 class="postcard__title red"><a class="text-black text-decoration-none" href="#">Podcast Title</a></h1>
-                <div class="postcard__subtitle small">
-                    <time class="text-black" datetime="2020-05-25 12:00:00">
-                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                    </time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit...</div>
-                <ul class="postcard__tagbox">
-                    <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                    <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                    <li class="tag__item play red">
-                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-
-
-    </div>
-</section> -->
+</section>
