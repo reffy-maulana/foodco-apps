@@ -26,9 +26,8 @@
     </header>
 
     <main class="flex-shrink-0">
-        <div class="bg-light py-5">
+        <div class="bg-white py-5">
             <div class="container px-5 pb-5">
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -48,7 +47,6 @@
                             <td>News and Event</td>
                             <td><a class="btn btn-primary btn-lg px-3 py-1 fs-6 fw-bolder" href="/admin/news">Lihat</a></td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>

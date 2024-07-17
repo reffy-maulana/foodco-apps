@@ -28,7 +28,7 @@
     <main class="flex-shrink-0">
 
         <!-- About Section-->
-        <section class="bg-light py-5" id="aboutus">
+        <section class="bg-white py-5" id="aboutus">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <h2 class="display-5 text-center fw-bolder mb-5"><span class="text-gradient d-inline">Tentang Kami</span></h2>

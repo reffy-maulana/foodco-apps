@@ -29,8 +29,6 @@
         <div class="bg-light py-5">
             <div class="container px-5 pb-5">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahMenu">Tambah Menu</button>
-
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -47,7 +45,6 @@
                         $counter = 1;
                         @endphp
                         @foreach ($filteredMenuItems as $menu)
-
                         <tr>
                             <th scope="row">{{$counter++}}</th>
                             <td>{{ $menu->name }}</td>
@@ -111,7 +108,7 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Tambah</button>
                 </div>
                 </form>
@@ -153,7 +150,7 @@
                             @endif
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Update</button>
                         </div>
                     </form>
@@ -178,7 +175,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-danger">Hapus</button>
                     </div>
                 </form>

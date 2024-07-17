@@ -56,39 +56,47 @@
         </div>
 
         <!-- Section Berita / Event -->
-        <x-news-event-section></x-news-event-section>
-
-        <div class="container py-2">
-            <div class="h1 text-center text-gradient fw-bold mb-5" id="pageHeaderTitle">News & Events</div>
-            @foreach ($news as $berita)
-            <article class="postcard bg-white blue">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img img-fluid mx-auto" src="{{ url('/') }}/uploads/news/{{ $berita->photo }}" alt="Image Title" />
-                </a>
-                <div class="postcard__text t-dark">
-                    <h1 class="postcard__title"><a class="text-black text-decoration-none" href="#">{{ $berita->headline }}</a></h1>
-                    <div class="postcard__subtitle small">
-                        <time class="text-black" datetime="2020-05-25 12:00:00">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <p>{{ $berita->created_at->format('l, d F Y') }}</p>
-                        </time>
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt text-black">{{ $berita->Deskripsi }}</div>
-                    <div class="mt-4">
-                        <p class="text-dark">Author : {{$berita->author}}</p>
+        <section class="py-5 container bg-white">
+            <h2 class="fw-bolder mb-4 text-gradient text-center">News & Events</h2>
+            <div id="newsCarousel" class="slick-carousel">
+                @foreach ($news as $berita)
+                <div class="news-item p-3">
+                    <div class="card shadow mb-4">
+                        <a class="d-block" href="#">
+                            <img class="card-img-top img-fluid" src="{{ url('/') }}/uploads/news/{{ $berita->photo }}" alt="Image Title" style="object-fit: cover; height: 300px;" />
+                        </a>
+                        <div class="card-body">
+                            <h2 class="h3"><a class="text-black text-decoration-none" href="#">{{ $berita->headline }}</a></h2>
+                            <div class="small text-muted mb-2">
+                                <i class="fas fa-calendar-alt me-2"></i>{{ $berita->created_at->format('l, d F Y') }}
+                            </div>
+                            <p class="text-black">{{ $berita->Deskripsi }}</p>
+                            <p class="text-dark mt-2">Author: {{$berita->author}}</p>
+                        </div>
                     </div>
                 </div>
-            </article>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary me-2" type="button" id="news-prev">
+                    <span aria-hidden="true">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </span>
+                </button>
+                <button class="btn btn-outline-primary" type="button" id="news-next">
+                    <span aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </button>
+            </div>
+        </section>
 
         <!-- Partners Carousel Section -->
-        <section class="py-5 container-fluid">
+        <section class="py-5 container-fluid bg-white">
             <h2 class="fw-bolder mb-4 text-gradient text-center">Our Partners</h2>
             <div id="partnersCarousel" class="slick-carousel row mb-5">
                 @foreach ($partners as $partner)
-                <div class="col" style="padding-right: 15px;">
+                <div class="p-3" style="padding-right: 15px;">
                     <div class="card h-100 shadow border-0">
                         <img class="card-img-top" src="{{ asset('uploads/' . $partner->photo) }}" alt="{{ $partner->name }}" style="width: 100%; height: 250px; object-fit: cover;" />
                         <div class="card-body p-4">
@@ -157,12 +165,51 @@
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Core theme JS-->
     <script src="js/script.js"></script>
-    <!-- Tambahkan referensi JS slick -->
+
+    <!-- JS slick -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    {{-- Script untuk carousel --}}
+
+    {{-- Script untuk news carousel --}}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#newsCarousel').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                prevArrow: false,
+                nextArrow: false,
+                responsive: [
+                    {
+                        breakpoint: 992, // lg
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 768, // md
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+            $('#news-prev').click(function(){
+                $('#newsCarousel').slick('slickPrev');
+            });
+
+            $('#news-next').click(function(){
+                $('#newsCarousel').slick('slickNext');
+            });
+        });
+    </script>
+
+    {{-- Script untuk Partner Carousel --}}
     <script type="text/javascript">
         $(document).ready(function(){
             $('#partnersCarousel').slick({
@@ -171,6 +218,8 @@
                 autoplay: true,
                 autoplaySpeed: 3000,
                 dots: true,
+                prevArrow: false,
+                nextArrow: false,
                 responsive: [
                     {
                         breakpoint: 992, // lg

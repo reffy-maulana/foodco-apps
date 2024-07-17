@@ -29,7 +29,6 @@
         <div class="bg-light py-5">
             <div class="container px-5 pb-5">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahBerita">Tambah Event</button>
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -48,7 +47,6 @@
                         @endphp
                         @foreach ($news as $berita)
                         <tr>
-
                             <th scope="row">{{ $counter++ }}</th>
                             <td>{{ $berita->headline }}</td>
                             <td>{{ $berita->author }}</td>
@@ -61,8 +59,6 @@
                             </td>
                         </tr>
                         @endforeach
-
-
                     </tbody>
                 </table>
             </div>
@@ -107,20 +103,18 @@
                         <div class="input-group mb-3">
                             <select class="form-select" id="type" name="type">
                                 <option selected>Choose...</option>
-                                <option value="Kuliner" {{ old('type') == 1 ? 'selected' : '' }}>Kuliner</option>
-                                <option value="Teknologi" {{ old('type') == 2 ? 'selected' : '' }}>Teknologi</option>
-                                <option value="Olahraga" {{ old('type') == 3 ? 'selected' : '' }}>Olahraga</option>
+                                <option value="Diskon/Promo" {{ old('type') == 1 ? 'selected' : '' }}>Diskon/Promo</option>
+                                <option value="Event/Acara" {{ old('type') == 2 ? 'selected' : '' }}>Event/Acara</option>
+                                <option value="Lainnya" {{ old('type') == 3 ? 'selected' : '' }}>Lainnya</option>
                             </select>
                         </div>
-
-
                         <div class="mb-3">
                             <label for="imageUpload" class="form-label"></label>
                             <input class="form-control" type="file" id="formFile" name="photo" accept=".png, .jpg, .jpeg">
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Tambah</button>
                 </div>
                 </form>
@@ -157,20 +151,17 @@
                         <div class="form-group mb-3">
                             <label for="type{{ $berita->id }}">Type</label>
                             <select class="form-select" id="type{{ $berita->id }}" name="type">
-                                <option value="Kuliner" {{ old('type', $berita->type) == 'Kuliner' ? 'selected' : '' }}>Kuliner</option>
-                                <option value="Teknologi" {{ old('type', $berita->type) == 'Teknologi' ? 'selected' : '' }}>Teknologi</option>
-                                <option value="Olahraga" {{ old('type', $berita->type) == 'Olahraga' ? 'selected' : '' }}>Olahraga</option>
+                                <option value="Diskon/Promo" {{ old('type', $berita->type) == 'Diskon/Promo' ? 'selected' : '' }}>Diskon/Promo</option>
+                                <option value="Event/Acara" {{ old('type', $berita->type) == 'Event/Acara' ? 'selected' : '' }}>Event/Acara</option>
+                                <option value="Lainnya" {{ old('type', $berita->type) == 'Lainnya' ? 'selected' : '' }}>Lainnya</option>
                             </select>
                         </div>
-
-
                         <div class="mb-3">
                             <label for="imageUpload" class="form-label"></label>
                             <input class="form-control" type="file" id="formFile" name="photo" accept=".png, .jpg, .jpeg">
                         </div>
-
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Update</button>
                         </div>
                     </form>
@@ -196,7 +187,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-danger">Hapus</button>
                     </div>
                 </form>
