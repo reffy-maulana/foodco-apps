@@ -26,56 +26,42 @@
     </header>
 
     <main class="flex-shrink-0">
-        <div class="bg-light">
-            <div class="px-5 pb-5">
-                <div class="container-menu row gx-5">
-                    <div class="col-xxl-7">
-                        <!-- Menu Section-->
-                        <div class="py-5">
-                            <div class="container py-5">
-                                <div class="tab-class text-center">
-                                    <div class="row mb-4">
-                                        <div class="col-6 text-start text-gradient">
-                                            <h1 class="fw-bolder">Menu {{ $partner->name }}</h1>
+        <div class="bg-light px-5 pb-5">
+            <div class="container-menu row gx-5">
+                <div class="col-xxl-7">
+                    <!-- Menu Section-->
+                    <section>
+                        <div class="container py-5">
+                            <div class="text-center mb-5 text-gradient">
+                                <h1 class="fw-bolder">Menu {{ $partner->name }}</h1>
+                            </div>
+                            <div class="row g-4">
+                                @foreach ($filteredMenuItems as $menu)
+                                <div class="col-md-6 col-lg-4 col-xl-4">
+                                    <div class="card shadow mb-4" style="height: 500px;">
+                                        <img src="{{ url('/') }}/uploads/menu/{{ $menu->photo }}" class="card-img-top img-fluid rounded-top" alt="gambar-menu" style="height: 200px; object-fit: cover; object-position: center;">
+                                        <div class="card-body position-relative">
+                                            <h4 class="fw-bold text-primary">{{ $menu->name }}</h4>
+                                            <p class="card-text">{!! nl2br(e($menu->Deskripsi)) !!}</p>
                                         </div>
-                                    </div>
-                                    <div class="menu-content">
-                                        <div id="tab-1" class="">
-                                            <div class="row g-4">
-                                                <div class="col-lg-12">
-                                                    <div class="menu-container row g-4">
-                                                        @foreach ($filteredMenuItems as $menu)
-                                                        <div class="menu-items col-md-6 col-lg-4 col-xl-3">
-                                                            <div class="rounded position-relative">
-                                                                <div class="menu-img">
-                                                                    <img src="{{ url('/') }}/uploads/menu/{{ $menu->photo }}" class="img-fluid w-100 rounded-top" alt="gambar-menu" style="width: 100%; height: 150px; object-fit: cover; object-position: center;">
-                                                                </div>
-                                                                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Foods</div>
-                                                                <div class="p-2 border border-primary border-top-0 rounded-bottom">
-                                                                    <h4 class="fw-bold text-primary"><?= $menu->name; ?></h4>
-                                                                    <p><?= $menu->Deskripsi; ?></p>
-                                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                        <p class="fs-5 fw-bold">Rp. {{ $menu->harga }}</p>
-                                                                        <a target="_blank" type="button" class="btn btn-primary rounded-pill px-3 text-light" href="https://wa.me/{{ $partner->nohp }}?text=Halo%2C%20saya%20ingin%20memesan%20{{ $menu->name }}">Beli</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="fs-5 fw-bold">Rp. {{ $menu->harga }}</p>
+                                                <a target="_blank" type="button" class="btn btn-primary rounded-pill flex-grow-1 text-light" style="width: calc(100% - 1.25rem);" href="https://wa.me/{{ $partner->nohp }}?text=Halo%2C%20saya%20ingin%20memesan%20{{ $menu->name }}">Beli</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
     </main>
-
+    
+    
     {{-- Modal Tambah Menu --}}
     <div class="modal fade" id="tambahMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

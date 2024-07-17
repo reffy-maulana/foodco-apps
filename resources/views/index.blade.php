@@ -40,7 +40,14 @@
                                 <div class="text-uppercase">Order &middot; Menu &middot; Marketing</div>
                             </div>
                             <div class="fs-3 fw-normal text-muted">Come order to</div>
-                            <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Istana Kuliner Pakujaya</span></h1>
+                            <h1 class="display-3 fw-bolder mb-3"><span class="text-gradient d-inline">Istana Kuliner Pakujaya</span></h1>
+                            <div class="text-center text-lg-start">
+                                <div class="text-gradient p-1 mb-4">
+                                    <i class="fas fa-clock me-2"></i>
+                                    <span class="fw-bold">Open Every Day</span><br>
+                                    <span class="fw-bold">10:00 AM - 22:00 PM</span>
+                                </div>
+                            </div>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
                                 <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="<?= route('partner'); ?>">Order</a>
                                 <a class="btn btn-success btn-lg px-5 py-3 fs-6 fw-bolder" href="#location">View Outlet</a>
@@ -61,16 +68,16 @@
             <div id="newsCarousel" class="slick-carousel">
                 @foreach ($news as $berita)
                 <div class="news-item p-3">
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4" style="height: 550px;">
                         <a class="d-block" href="#">
                             <img class="card-img-top img-fluid" src="{{ url('/') }}/uploads/news/{{ $berita->photo }}" alt="Image Title" style="object-fit: cover; height: 300px;" />
                         </a>
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h2 class="h3"><a class="text-black text-decoration-none" href="#">{{ $berita->headline }}</a></h2>
                             <div class="small text-muted mb-2">
                                 <i class="fas fa-calendar-alt me-2"></i>{{ $berita->created_at->format('l, d F Y') }}
                             </div>
-                            <p class="text-black">{{ $berita->Deskripsi }}</p>
+                            <p class="text-black flex-grow-1">{{ $berita->Deskripsi }}</p> 
                             <p class="text-dark mt-2">Author: {{$berita->author}}</p>
                         </div>
                     </div>
@@ -92,7 +99,7 @@
         </section>
 
         <!-- Partners Carousel Section -->
-        <section class="py-5 container-fluid bg-white">
+        <section class="py-5 container bg-white">
             <h2 class="fw-bolder mb-4 text-gradient text-center">Our Partners</h2>
             <div id="partnersCarousel" class="slick-carousel row mb-5">
                 @foreach ($partners as $partner)

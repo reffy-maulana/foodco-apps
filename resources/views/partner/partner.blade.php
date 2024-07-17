@@ -26,54 +26,38 @@
     </header>
 
     <main class="flex-shrink-0">
-        <div class="bg-light">
-            <div class="px-5 pb-5">
-                <div class="container-menu row gx-5">
-                    <div class="col-xxl-7">
-                        <!-- Menu Section-->
-                        <div class="py-5">
-                            <div class="container py-5">
-                                <div class="tab-class text-center">
-                                    <div class="row">
-                                        <div class="col-12 pb-5 text-center text-gradient">
-                                            <h1 class="fw-bolder">Our Partner</h1>
+        <div class="bg-light px-5 pb-5">
+            <div class="container-menu row gx-5">
+                <div class="col-xxl-7">
+                    <!-- Partner Section-->
+                    <section>
+                        <div class="container py-5">
+                            <div class="text-center pb-5 text-gradient">
+                                <h1 class="fw-bolder">Our Partner</h1>
+                            </div>
+                            <div class="row g-4">
+                                @foreach ($partners as $partner)
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <div class="card shadow mb-4" style="height: 450px;">
+                                        <img src="{{ url('/') }}/uploads/{{ $partner->photo }}" class="card-img-top img-fluid rounded-top" alt="gambar-partner" style="height: 200px; object-fit: cover; object-position: center;">
+                                        <div class="card-body">
+                                            <h4 class="fw-bold text-primary">{{ $partner->name }}</h4>
+                                            <p class="card-text">{!! nl2br(e($partner->Deskripsi)) !!}</p>
                                         </div>
-                                    </div>
-
-                                    <div class="partner-content">
-                                        <div id="tab-1" class="">
-                                            <div class="row g-4">
-                                                <div class="col-lg-12">
-                                                    <div class="partner-container row g-4">
-                                                        @foreach ($partners as $partner)
-                                                        <div class="partner-items col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                                            <div class="rounded position-relative">
-                                                                <div class="partner-img">
-                                                                    <img src="{{ url('/') }}/uploads/{{ $partner->photo }}" class="img-fluid w-100 rounded-top" alt="gambar-partner" style="width: 100%; height: 150px; object-fit: cover; object-position: center;">
-                                                                </div>
-                                                                <div class="p-2 border border-primary border-top-0 rounded-bottom">
-                                                                    <h4 class="fw-bold text-primary"><?= $partner->name; ?></h4>
-                                                                    <p class="flex-grow-1">{!! $partner->Deskripsi !!}</p>
-                                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                                        <a href="{{ route('menus',$partner->id)}}" class="btn btn-primary rounded-pill px-3 text-light"> Order Menu </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="card-footer bg-transparent d-flex justify-content-between">
+                                            <a href="{{ route('menus', $partner->id) }}" class="btn btn-primary rounded-pill px-3 text-light">Order Menu</a>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
     </main>
+    
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">
         <div class="container px-5">
