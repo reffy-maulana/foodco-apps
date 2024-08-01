@@ -6,9 +6,21 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\MenuController' => $baseDir . '/app/Http/Controllers/MenuController.php',
+    'App\\Http\\Controllers\\NewsController' => $baseDir . '/app/Http/Controllers/NewsController.php',
+    'App\\Http\\Controllers\\PartnerController' => $baseDir . '/app/Http/Controllers/PartnerController.php',
+    'App\\Http\\Middleware\\LoginAdmin' => $baseDir . '/app/Http/Middleware/LoginAdmin.php',
+    'App\\Models\\Menu' => $baseDir . '/app/Models/Menu.php',
+    'App\\Models\\News' => $baseDir . '/app/Models/News.php',
+    'App\\Models\\Partner' => $baseDir . '/app/Models/Partner.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
+    'App\\View\\Components\\HeroPicture' => $baseDir . '/app/View/Components/HeroPicture.php',
+    'App\\View\\Components\\Navbar' => $baseDir . '/app/View/Components/Navbar.php',
+    'App\\View\\Components\\NewsEventSection' => $baseDir . '/app/View/Components/NewsEventSection.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
     'Brick\\Math\\BigInteger' => $vendorDir . '/brick/math/src/BigInteger.php',
