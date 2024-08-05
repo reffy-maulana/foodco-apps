@@ -55,7 +55,7 @@ class AuthController extends Controller
     public function login()
     {
 
-        return view('login');
+        return redirect(url('/'));
     }
 
     public function logout()
