@@ -12,7 +12,6 @@ class Partner extends Model
         'name',
         'photo',
         'nohp',
-
         'deskripsi',
     ];
 
